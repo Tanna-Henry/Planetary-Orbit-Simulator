@@ -7,6 +7,13 @@ WIDTH, HEIGHT = 800, 800
 WIN = pygame.display.set_mode((WIDTH, HEIGHT)) # size of window
 pygame.display.set_caption('Planet Orbit Simulator')
 
+sun_color = (255, 255, 0)
+BLUE = (100, 149, 237)
+RED = (188, 39, 50)
+DARK_GRAY = (80, 78, 81)
+WHITE = (255, 255, 255)
+
+
 # set Planet class
 class Planet:
 
@@ -45,13 +52,15 @@ def main():
     clock = pygame.time.Clock() # set frame rate
 
     # Creating the sun + planets
-    sun_color = (255, 255, 0)
     sun = Planet(0, 0, 30, sun_color, 1.98892e30)
     sun.sun = True
 
-    #earth =
+    earth = Planet(-1 * Planet.AU, 0, 16 , BLUE, 5.9742e24)
+    mars = Planet(-1.524 * Planet.AU, 0, 12, RED, 6.39e23)
+    mercury = Planet(0.387 * Planet.AU, 0, 8, DARK_GRAY, 3.30e23)
+    venus = Planet(0.723 * Planet.AU, 0, 14, WHITE, 4.8685e24)
 
-    planets = [sun]
+    planets = [sun, earth, mars, mercury, venus]
 
 
     # while game is running
