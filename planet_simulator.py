@@ -114,7 +114,7 @@ def main():
     mercury = Planet(-0.387 * Planet.AU, 0, 8, DARK_GRAY, 3.30e23)
     venus = Planet(-0.723 * Planet.AU, 0, 14, WHITE, 4.8685e24)
 
-    # exisiting vertical velocity
+    # exisiting orbital velocity
     earth.y_vel = 29.783 * 1000
     mars.y_vel = 24.077 * 1000
     mercury.y_vel = 47.4 * 1000
